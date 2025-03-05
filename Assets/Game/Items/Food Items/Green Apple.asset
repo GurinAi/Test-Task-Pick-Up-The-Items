@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 25c0b147cfba2ab49ace2a8458340c62, type: 3}
-  m_Name: Red Apple
+  m_Name: Green Apple
   m_EditorClassIdentifier: 
-  itemName: Red Apple
+  itemName: Green Apple
   itemType: 1
-  itemPrefab: {fileID: 3606601492129619058, guid: 63ea5b7bd1ebbce4daad0a8e634313b1, type: 3}
+  itemPrefab: {fileID: 3756883339600652024, guid: ed16e6a1d4b096347a36233aa79e072c, type: 3}

@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25c0b147cfba2ab49ace2a8458340c62, type: 3}
-  m_Name: Red Apple
+  m_Script: {fileID: 11500000, guid: 823ea8466ead7f24eb6240428de20a38, type: 3}
+  m_Name: Sphere
   m_EditorClassIdentifier: 
-  itemName: Red Apple
-  itemType: 1
-  itemPrefab: {fileID: 3606601492129619058, guid: 63ea5b7bd1ebbce4daad0a8e634313b1, type: 3}
+  itemName: Sphere
+  itemType: 2

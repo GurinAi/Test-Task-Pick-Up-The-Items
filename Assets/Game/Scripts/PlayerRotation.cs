@@ -10,6 +10,7 @@ public class PlayerRotation : MonoBehaviour
 
     private float rotationX;
     private float rotationY;
+
     private void Start()
     {
         rotationX = transform.rotation.eulerAngles.x;

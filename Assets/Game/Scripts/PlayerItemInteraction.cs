@@ -1,11 +1,8 @@
 using UnityEngine;
-using UnityEngine.UI;
-using static UnityEditor.Progress;
 
 public class PlayerItemInteraction : MonoBehaviour
 {
     [SerializeField] Transform slot;
-
     [SerializeField] GameObject throwButton;
 
     [SerializeField] float rayLength = 5F;
@@ -30,7 +27,7 @@ public class PlayerItemInteraction : MonoBehaviour
         {
             if (!pickedItem) 
             {
-                var ray = characterCamera.ViewportPointToRay(Vector3.one * 0.5f);
+                var ray = characterCamera.ScreenPointToRay(Input.mousePosition);
                 RaycastHit hit;
 
                 Debug.DrawRay(ray.origin, ray.direction * rayLength, Color.green);
@@ -56,6 +53,8 @@ public class PlayerItemInteraction : MonoBehaviour
         pickedItem.transform.SetParent(slot);
         pickedItem.transform.localPosition = Vector3.zero;
         pickedItem.transform.localEulerAngles = Vector3.zero;
+
+        pickedItem.ItemCollider.enabled = false;
         ShowThrowButton();
     }
     public void ThrowItem()
@@ -63,6 +62,8 @@ public class PlayerItemInteraction : MonoBehaviour
         pickedItem.transform.SetParent(null);
         pickedItem.Rb.isKinematic = false;
         pickedItem.Rb.AddForce(pickedItem.transform.forward * throwForce, ForceMode.Impulse );
+        pickedItem.ItemCollider.enabled = true;
+
         pickedItem = null;
         HideThrowButton();
     }
